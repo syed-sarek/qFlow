@@ -82,7 +82,8 @@
 					<div class="fieldcontain">
 					<label>Customer</label>
                         <g:select name="customer_id" from="${drl2.Customer.findAll()}" optionValue="${{it.name}}" optionKey="id" />
-                    </div>
+						<button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Add Customer</button>
+					</div>
                     <f:field bean="daily_sales" property="notes"/>
 					<g:hiddenField name="sold_by" value="${session.user.name}" />
 
@@ -91,6 +92,17 @@
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
                 </fieldset>
             </g:form>
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					  <!-- Modal content-->
+					  <div class="modal-content">
+						<g:include controller="customer" action="create" />
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+				</div>
+			</div>
         </div>
     </body>
 </html>

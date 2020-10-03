@@ -119,7 +119,7 @@
 
 <body>
 	<div class = "panel-heading" style="position:relative; z-index:1;background-color: #2a56c6 !important;box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);border-radius: 0; height: 50px !important;">
-		<h1 align="left" style="color:white; margin: 0.3em 0 0.3em 1em !important;">&nbsp;Swifter Phonebook</h1>
+		<h1 align="left" style="color:white; margin: 0.3em 0 0.3em 1em !important;">&nbsp;qFlow Phonebook</h1>
 		<h6 align="right" style="color:white; margin: -2.2em 0.3em 0.3em 1em !important;">&nbsp;${new Date().format('dd MMM yyyy')}</h6>
 		<h6 align="right" style="color:white; margin: 0 1.2em 0.3em 1em !important;">&nbsp;${new Date().format('h:mm a')}</h6>
 	</div>
@@ -174,7 +174,7 @@
 	<div style="width: 100%">
 		%{--<g:link class="create" style="position: absolute; padding: 2px; left: 20px" action="list_admin">Admin</g:link>--}%
 		%{--<g:link class="create" style="position: absolute; padding: 2px; left: 30%" action="list_old" target="_blank" onclick="win(this.href,950,550)">Old Phonebook</g:link>--}%
-		<a style="font-size: 12px; text-decoration:none; color: black; font-style: italic; position: absolute; padding: 2px; right: 16px" href="#">&copy; Swifter</a>
+		<a style="font-size: 12px; text-decoration:none; color: black; font-style: italic; position: absolute; padding: 2px; right: 16px" href="#">&copy; qFlow</a>
 	</div>
 
 </body>

@@ -32,7 +32,8 @@
                     <div class="fieldcontain">
                         <label>Category</label>
                         <g:select from="${drl2.Item_category.executeQuery('select distinct c.category from Item_category c')}" name="category" />
-                    </div>
+						<button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Add Category</button>
+					</div>
                     <f:field bean="item_master" property="item_name"/>
                     <f:field bean="item_master" property="description"/>
                     <f:field bean="item_master" property="model"/>
@@ -50,6 +51,17 @@
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
                 </fieldset>
             </g:form>
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					  <!-- Modal content-->
+					  <div class="modal-content">
+						<g:include controller="item_category" action="create" />
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+				</div>
+			</div>
         </div>
     </body>
 </html>

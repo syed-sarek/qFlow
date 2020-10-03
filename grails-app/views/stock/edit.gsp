@@ -35,7 +35,7 @@
                             <input ng-model="first" type="text" autofocus/><br>
                         </div>
                         <div class="fieldcontain"><label>New Quantity</label>
-                           <g:field name="stock_quantity" type="number" value="{{ first-- ${this.stock?.stock_quantity} }}" id="${stock.id}"/>
+                           <g:field name="stock_quantity" readonly type="number" value="{{ first-- ${this.stock?.stock_quantity} }}" id="${stock.id}"/>
                         </div>
                     </div>
                 </fieldset>

@@ -70,6 +70,15 @@
 		  .sidenav {padding-top: 10px;}
 		  .sidenav a {font-size: 18px;}
 		}
+		
+		.ft {
+		   position: fixed;
+		   left: 0;
+		   bottom: 0;
+		   width: 100%;
+		   color: black;
+		   text-align: center;
+		}
 	</style>
 	<script>
 	function openNav() {
@@ -133,6 +142,9 @@
 			</div>
         </div>
     </div><br><br>
+	<div class="ft">
+		<a style="text-decoration:none; font-size: 0.9em; color:black" href="https://i-swifter.com">© iSwifter</a>
+	</div>
 
     <g:layoutBody/>
 

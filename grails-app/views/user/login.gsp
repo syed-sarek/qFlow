@@ -138,7 +138,7 @@
 					</div>
 			</div>
 		</div>
-    <div class="navbar-fixed-bottom" align="right" role="contentinfo"><a style="text-decoration:none; font-size: 11px; color:black" href="https://www.facebook.com/syed.sarek">Developed by: Syed Abdul Sarek</a>&nbsp;  &nbsp; </div>
+    <div class="navbar-fixed-bottom" align="center" role="contentinfo"><a style="text-decoration:none; font-size: 0.9em; color:black" href="https://i-swifter.com">© iSwifter</a>&nbsp;  &nbsp; </div>
 </div>
 </body>
 </html>

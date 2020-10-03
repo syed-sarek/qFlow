@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Saturday-March-14-2020   
+--  File created - Saturday-October-03-2020   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table ADMIN_COMPANY
@@ -212,6 +212,7 @@ REM INSERTING into SAREK.INV_CUSTOMER
 SET DEFINE OFF;
 Insert into SAREK.INV_CUSTOMER (ID,NAME,PHONE,ADDRESS,EMAIL,COUNTRY,STATUS) values (1,'Mr. ABC','87955412','Street Road','ss@gmail.com','Bangladesh','Regular');
 Insert into SAREK.INV_CUSTOMER (ID,NAME,PHONE,ADDRESS,EMAIL,COUNTRY,STATUS) values (2,'Mr. Yusuf','01687554224','Hill Road, Ilford','hp@uk.com','UK','Regular');
+Insert into SAREK.INV_CUSTOMER (ID,NAME,PHONE,ADDRESS,EMAIL,COUNTRY,STATUS) values (3,'Md. Zahid','0171111111111','Dhaka','zah@z.com','BD','Regular');
 REM INSERTING into SAREK.INV_ITEMCATEGORY
 SET DEFINE OFF;
 Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (1,'General',null);
@@ -220,16 +221,20 @@ Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (3,'Machiner
 Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (4,'Accessories',null);
 Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (5,'IT',null);
 Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (6,'Stationary ',null);
-Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (7,'Others',null);
 Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (8,'Spare Parts',null);
+Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (11,'Electric',null);
+Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (9,'Transport',null);
+Insert into SAREK.INV_ITEMCATEGORY (ID,CATEGORY,DESCRIPTION) values (10,'Others',null);
 REM INSERTING into SAREK.INV_STOCK
 SET DEFINE OFF;
 Insert into SAREK.INV_STOCK (ID,ITEM_NAME,STOCK_QUANTITY) values (2,'Laptop',3567);
 Insert into SAREK.INV_STOCK (ID,ITEM_NAME,STOCK_QUANTITY) values (3,'Pen',2488);
+Insert into SAREK.INV_STOCK (ID,ITEM_NAME,STOCK_QUANTITY) values (4,'Fan',23);
 REM INSERTING into SAREK.ITEM_MASTER
 SET DEFINE OFF;
 Insert into SAREK.ITEM_MASTER (SL_NO,ITEM_NAME,MODEL,BRAND,CATEGORY,DESCRIPTION,UNIT_PRICE,REMARKS,UPDATE_DATE,ADDED_BY,ADDED_DATE,UNIT) values (3,'Laptop','E series','Sony','IT',null,20000,null,null,'sarek@swifter.com',to_date('04-JUN-17','DD-MON-RR'),'PCs');
 Insert into SAREK.ITEM_MASTER (SL_NO,ITEM_NAME,MODEL,BRAND,CATEGORY,DESCRIPTION,UNIT_PRICE,REMARKS,UPDATE_DATE,ADDED_BY,ADDED_DATE,UNIT) values (2,'Pen',null,null,'Stationary',null,null,'Test',null,'sarek.bd@gmail.com',to_date('15-MAY-17','DD-MON-RR'),'Dozen');
+Insert into SAREK.ITEM_MASTER (SL_NO,ITEM_NAME,MODEL,BRAND,CATEGORY,DESCRIPTION,UNIT_PRICE,REMARKS,UPDATE_DATE,ADDED_BY,ADDED_DATE,UNIT) values (4,'Fan',null,null,'Electric',null,200,null,null,'sarek@swifter.com',to_date('15-MAR-20','DD-MON-RR'),'PCs');
 REM INSERTING into SAREK.SALES_DAILY
 SET DEFINE OFF;
 Insert into SAREK.SALES_DAILY (ID,ITEM_NAME,QUANTITY,PRICE,SALES_DATE,SOLD_BY,NOTES,TRN_NO,CUSTOMER_ID) values (1,'Pen','10',50,to_date('30-NOV-17','DD-MON-RR'),'Syed Sarek','Test','Pen-301117-1',1);
@@ -239,15 +244,16 @@ Insert into SAREK.SALES_DAILY (ID,ITEM_NAME,QUANTITY,PRICE,SALES_DATE,SOLD_BY,NO
 Insert into SAREK.SALES_DAILY (ID,ITEM_NAME,QUANTITY,PRICE,SALES_DATE,SOLD_BY,NOTES,TRN_NO,CUSTOMER_ID) values (8,'Pen','1',12,to_date('14-MAR-20','DD-MON-RR'),'Syed Sarek',null,'SLS-140320-8',2);
 Insert into SAREK.SALES_DAILY (ID,ITEM_NAME,QUANTITY,PRICE,SALES_DATE,SOLD_BY,NOTES,TRN_NO,CUSTOMER_ID) values (9,'Laptop','1',20000,to_date('14-MAR-20','DD-MON-RR'),'Syed Sarek',null,'SLS-140320-9',1);
 Insert into SAREK.SALES_DAILY (ID,ITEM_NAME,QUANTITY,PRICE,SALES_DATE,SOLD_BY,NOTES,TRN_NO,CUSTOMER_ID) values (10,'Pen, Laptop','5, 1',21500,to_date('14-MAR-20','DD-MON-RR'),'Syed Sarek',null,'SLS-140320-10',1);
+Insert into SAREK.SALES_DAILY (ID,ITEM_NAME,QUANTITY,PRICE,SALES_DATE,SOLD_BY,NOTES,TRN_NO,CUSTOMER_ID) values (11,'Fan','2',500,to_date('15-MAR-20','DD-MON-RR'),'Syed Sarek',null,'SLS-150320-11',1);
 Insert into SAREK.SALES_DAILY (ID,ITEM_NAME,QUANTITY,PRICE,SALES_DATE,SOLD_BY,NOTES,TRN_NO,CUSTOMER_ID) values (3,'Pen','10',150,to_date('03-DEC-19','DD-MON-RR'),'Syed Sarek','N/A','SLS-031219-3',2);
 Insert into SAREK.SALES_DAILY (ID,ITEM_NAME,QUANTITY,PRICE,SALES_DATE,SOLD_BY,NOTES,TRN_NO,CUSTOMER_ID) values (4,'Pen, Laptop','3, 2',5000,to_date('03-DEC-19','DD-MON-RR'),'sarek@swifter.com','N/A','SLS-031219-4',2);
 Insert into SAREK.SALES_DAILY (ID,ITEM_NAME,QUANTITY,PRICE,SALES_DATE,SOLD_BY,NOTES,TRN_NO,CUSTOMER_ID) values (5,'Pen, Laptop','4, 4',20000,to_date('03-DEC-19','DD-MON-RR'),'sarek@swifter.com','AA','SLS-031219-5',1);
 REM INSERTING into SAREK.USERS
 SET DEFINE OFF;
-Insert into SAREK.USERS (NAME,PASSWORD,EMAIL,ID,STATUS,ROLE) values ('Super Admin','1234','super.admin@swifter.com',2,'Inactive','Super Admin');
-Insert into SAREK.USERS (NAME,PASSWORD,EMAIL,ID,STATUS,ROLE) values ('Test User','1234','user@swifter.com',3,'Active','User');
-Insert into SAREK.USERS (NAME,PASSWORD,EMAIL,ID,STATUS,ROLE) values ('Syed Sarek','1234','sarek@swifter.com',1,'Active','Super Admin');
-Insert into SAREK.USERS (NAME,PASSWORD,EMAIL,ID,STATUS,ROLE) values ('Admin','1234','admin@swifter.com',5,'Active','Admin');
+Insert into SAREK.USERS (NAME,PASSWORD,EMAIL,ID,STATUS,ROLE) values ('Super Admin','1234','super.admin@qflow.com',2,'Inactive','Super Admin');
+Insert into SAREK.USERS (NAME,PASSWORD,EMAIL,ID,STATUS,ROLE) values ('Test User','1234','user@qflow.com',3,'Active','User');
+Insert into SAREK.USERS (NAME,PASSWORD,EMAIL,ID,STATUS,ROLE) values ('Syed Sarek','1234','sarek@qflow.com',1,'Active','Super Admin');
+Insert into SAREK.USERS (NAME,PASSWORD,EMAIL,ID,STATUS,ROLE) values ('Admin','1234','admin@qflow.com',5,'Active','Admin');
 --------------------------------------------------------
 --  DDL for Index ADMIN_COMPANY_PK
 --------------------------------------------------------

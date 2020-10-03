@@ -96,11 +96,28 @@
                 </div>
                 <div class="card-content">
                     <p class="category">Monthly Sales</p>
-                    <h3 class="title">${month_sale.join(',')} <small>Tk</small></h3>
+                    <h3 class="title">${this_month_sale.join(',')} <small>Tk</small></h3>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        <i class="material-icons">date_range</i> Last 30 days
+                        <i class="material-icons">date_range</i> ${new Date().format('MMMM yyyy')}
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="green">
+                    <i class="material-icons">storage</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Total Item</p>
+                    <h3 class="title">${total_item.join(',')}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">update</i> Just Updated
                     </div>
                 </div>
             </div>
